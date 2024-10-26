@@ -87,7 +87,7 @@ public class WeatherApp extends JFrame {
         }
 
         try {
-            String apiKey = "4406488cfb21257a3c8b3b9dc259c961";  // Replace with your API key
+            String apiKey = "";  // Replace with your API key
             String geoUrl = buildGeocodingUrl(city, country, zip, apiKey);
             System.out.println("geoURL: " + geoUrl );
             HttpURLConnection conn = (HttpURLConnection) new URL(geoUrl).openConnection();
@@ -132,7 +132,7 @@ public class WeatherApp extends JFrame {
 
     // Fetch weather data for given latitude and longitude coordinates
     private void fetchWeatherData(double lat, double lon) {
-        String apiKey = "4406488cfb21257a3c8b3b9dc259c961";  // Replace with your API key
+        String apiKey = "";  // Replace with your API key
         String apiUrl = String.format("https://api.openweathermap.org/data/2.5/weather?lat=%.2f&lon=%.2f&units=%s&appid=%s",
                 lat, lon, unit, apiKey);
 
